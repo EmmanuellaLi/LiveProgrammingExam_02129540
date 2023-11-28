@@ -15,4 +15,20 @@ public class Patient {
     public void addExamination (Examination e) {
         examinations.add(e);
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getUrlFace() {
+        return urlFace;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public ArrayList<Examination> getExaminations() {
+        return examinations;
+    }
 }
