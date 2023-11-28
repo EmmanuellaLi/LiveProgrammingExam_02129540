@@ -1,3 +1,7 @@
+package Patient;
+
+import Examinations.Examination;
+
 import java.util.ArrayList;
 
 public class Patient {

@@ -1,4 +1,9 @@
-import jdk.vm.ci.meta.Local;
+package Displays;
+
+import Examinations.BpExamination;
+import Examinations.Examination;
+import Examinations.MriExamination;
+import Patient.Patient;
 
 import javax.swing.*;
 import java.time.LocalDate;
@@ -30,7 +35,7 @@ public class AdministratorDisplay extends Display{
             }
         }
 
-        // Display Information
+        // Displays.Display Information
         JPanel mainPanel = new JPanel();
         mainPanel.setSize(800,100);
         String message = "<html>Patient: " + name + ": MRI: " + magneticStrength + " Tesla, " + mriDate.toString() + ": BP: " + duration + ", " + bpDate.toString() + "</html>";

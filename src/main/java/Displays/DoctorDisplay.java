@@ -1,3 +1,10 @@
+package Displays;
+
+import Examinations.BpExamination;
+import Examinations.Examination;
+import Examinations.MriExamination;
+import Patient.Patient;
+
 import javax.swing.*;
 import java.awt.*;
 import java.net.MalformedURLException;

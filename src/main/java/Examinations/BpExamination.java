@@ -1,3 +1,5 @@
+package Examinations;
+
 import java.time.LocalDate;
 
 public class BpExamination extends Examination{

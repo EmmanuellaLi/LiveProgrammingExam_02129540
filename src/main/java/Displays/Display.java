@@ -1,3 +1,6 @@
+package Displays;
+
+import Patient.Patient;
 import javax.swing.*;
 
 public abstract class Display {
