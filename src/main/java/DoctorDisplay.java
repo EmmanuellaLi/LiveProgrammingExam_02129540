@@ -15,9 +15,9 @@ public class DoctorDisplay extends Display{
         String name = patient.getName();
         int age = patient.getAge();
 
-        String urlMRI;
-        int systolicPressure;
-        int diastolicPressure;
+        String urlMRI = null;
+        int systolicPressure = 0;
+        int diastolicPressure = 0;
         ArrayList<Examination> exams = patient.getExaminations();
         for (Examination e: exams) {
             if (e instanceof MriExamination) {
