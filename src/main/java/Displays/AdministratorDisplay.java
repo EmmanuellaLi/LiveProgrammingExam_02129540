@@ -18,7 +18,7 @@ public class AdministratorDisplay extends Display{
 
     @Override
     public JPanel getDisplay() {
-        // extracting all the information
+        // extracting all the required information
         String name = patient.getName();
 
         int magneticStrength = 0;
@@ -40,7 +40,7 @@ public class AdministratorDisplay extends Display{
         String mriDateString = mriDate.format(pattern);
         String bpDateString = bpDate.format(pattern);
 
-        // Displays.Display Information
+        // creates and formats panel displaying the information
         JPanel mainPanel = new JPanel();
         mainPanel.setSize(800,100);
         String message = "<html>Patient: " + name + ": MRI: " + magneticStrength + " Tesla, " + mriDateString + ": BP: " + duration + ", " + bpDateString + "</html>";

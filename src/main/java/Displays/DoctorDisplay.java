@@ -16,8 +16,9 @@ public class DoctorDisplay extends Display{
         super(patient);
     }
 
+    @Override
     public JPanel getDisplay(){
-        // extracting all the information
+        // extracting all the required information
         String urlFace = patient.getUrlFace();
         String name = patient.getName();
         int age = patient.getAge();
@@ -36,7 +37,7 @@ public class DoctorDisplay extends Display{
             }
         }
 
-        // displaying the information
+        // creates and formats panel displaying the information
         JPanel mainPanel = new JPanel();
         mainPanel.setSize(800,300);
         JPanel facePanel = new JPanel();
@@ -48,6 +49,7 @@ public class DoctorDisplay extends Display{
         JPanel bpPanel = new JPanel();
         bpPanel.setSize(200,300);
 
+        // patient image panel
         JLabel faceLabel = new JLabel();
         URL actualFaceUrl = null;
         try{
@@ -60,10 +62,12 @@ public class DoctorDisplay extends Display{
         faceLabel.setIcon(faceImage);
         facePanel.add(faceLabel);
 
+        // patient details panel
         String nameMessage = "<html>Name: " + name + "<br>" + "Age: " + age + "</html>";
         JLabel nameLabel = new JLabel(nameMessage);
         namePanel.add(nameLabel);
 
+        // mri scan image panel
         JLabel mriLabel = new JLabel();
         URL actualMriUrl = null;
         try{
@@ -76,10 +80,12 @@ public class DoctorDisplay extends Display{
         mriLabel.setIcon(mriImage);
         mriPanel.add(mriLabel);
 
+        // blood pressure information panel
         String bpMessage = "<html>Blood pressure<br>" + systolicPressure + " over " + diastolicPressure + "</html>";
         JLabel bpLabel = new JLabel(bpMessage);
         bpPanel.add(bpLabel);
 
+        // combining all the panels to form a main panel
         mainPanel.setLayout(new GridLayout(1,4));
         mainPanel.add(facePanel);
         mainPanel.add(namePanel);

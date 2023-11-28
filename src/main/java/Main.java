@@ -24,6 +24,7 @@ public class Main {
         DoctorDisplay doctorDisplay2 = new DoctorDisplay(patient2);
         AdministratorDisplay administratorDisplay2 = new AdministratorDisplay(patient2);
 
+        // Doctor View
         JFrame frameDoc = new JFrame("Doctor Displays.Display");
         frameDoc.setSize(800,600);
         frameDoc.setLayout(new GridLayout(2,1));
@@ -38,6 +39,7 @@ public class Main {
             }
         });
 
+        // Administrator View
         JFrame frameAdmin = new JFrame("Administrator Displays.Display");
         frameAdmin.setSize(800,200);
         frameAdmin.setLayout(new GridLayout(2,1));

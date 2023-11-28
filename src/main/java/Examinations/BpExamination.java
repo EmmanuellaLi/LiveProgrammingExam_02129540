@@ -3,9 +3,9 @@ package Examinations;
 import java.time.LocalDate;
 
 public class BpExamination extends Examination{
-    private int systolicPressure;
-    private int diastolicPressure;
-    private String duration;
+    private final int systolicPressure;
+    private final int diastolicPressure;
+    private final String duration;
 
     public BpExamination(int systolicPressure, int diastolicPressure, LocalDate date, String duration) {
         super(date);
