@@ -18,22 +18,8 @@ public class Main {
         DoctorDisplay doctorDisplay2 = new DoctorDisplay(patient2);
         AdministratorDisplay administratorDisplay2 = new AdministratorDisplay(patient2);
 
-        JFrame frame = new JFrame("Doctor Display");
-        frame.setSize(1000,1000);
-        frame.setLayout(new GridLayout(2,1));
-        frame.setVisible(true);
-        frame.add(doctorDisplay1.getDisplay());
-        frame.add(doctorDisplay2.getDisplay());
-
-        frame.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                frame.dispose();
-            }
-        });
-
         JFrame frameDoc = new JFrame("Doctor Display");
-        frameDoc.setSize(1000,1000);
+        frameDoc.setSize(800,600);
         frameDoc.setLayout(new GridLayout(2,1));
         frameDoc.setVisible(true);
         frameDoc.add(doctorDisplay1.getDisplay());
@@ -47,7 +33,7 @@ public class Main {
         });
 
         JFrame frameAdmin = new JFrame("Administrator Display");
-        frameAdmin.setSize(800,400);
+        frameAdmin.setSize(800,200);
         frameAdmin.setLayout(new GridLayout(2,1));
         frameAdmin.setVisible(true);
         frameAdmin.add(administratorDisplay1.getDisplay());
@@ -56,7 +42,7 @@ public class Main {
         frameAdmin.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                frameDoc.dispose();
+                frameAdmin.dispose();
             }
         });
 

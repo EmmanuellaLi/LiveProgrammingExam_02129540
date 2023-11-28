@@ -32,7 +32,7 @@ public class AdministratorDisplay extends Display{
 
         // Display Information
         JPanel mainPanel = new JPanel();
-        mainPanel.setSize(400,200);
+        mainPanel.setSize(800,100);
         String message = "<html>Patient: " + name + ": MRI: " + magneticStrength + " Tesla, " + mriDate.toString() + ": BP: " + duration + ", " + bpDate.toString() + "</html>";
         JLabel label = new JLabel(message);
         mainPanel.add(label);

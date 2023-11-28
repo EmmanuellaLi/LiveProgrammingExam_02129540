@@ -31,13 +31,25 @@ public class DoctorDisplay extends Display{
 
         // displaying the information
         JPanel mainPanel = new JPanel();
+        mainPanel.setSize(800,300);
         JPanel facePanel = new JPanel();
+        facePanel.setSize(200,300);
         JPanel namePanel = new JPanel();
+        namePanel.setSize(200,300);
         JPanel mriPanel = new JPanel();
+        mriPanel.setSize(200,300);
         JPanel bpPanel = new JPanel();
+        bpPanel.setSize(200,300);
 
         JLabel faceLabel = new JLabel();
-        ImageIcon faceImage = new ImageIcon(urlFace);
+        URL actualFaceUrl = null;
+        try{
+            actualFaceUrl = new URL(urlFace);
+        }
+        catch (MalformedURLException e){
+            System.out.println(e.getMessage());
+        }
+        ImageIcon faceImage = new ImageIcon(actualFaceUrl);
         faceLabel.setIcon(faceImage);
         facePanel.add(faceLabel);
 
@@ -46,7 +58,14 @@ public class DoctorDisplay extends Display{
         namePanel.add(nameLabel);
 
         JLabel mriLabel = new JLabel();
-        ImageIcon mriImage = new ImageIcon(urlMRI);
+        URL actualMriUrl = null;
+        try{
+            actualMriUrl = new URL(urlMRI);
+        }
+        catch (MalformedURLException e){
+            System.out.println(e.getMessage());
+        }
+        ImageIcon mriImage = new ImageIcon(actualMriUrl);
         mriLabel.setIcon(mriImage);
         mriPanel.add(mriLabel);
 
@@ -54,7 +73,7 @@ public class DoctorDisplay extends Display{
         JLabel bpLabel = new JLabel(bpMessage);
         bpPanel.add(bpLabel);
 
-        mainPanel.setLayout(new GridLayout(4,1));
+        mainPanel.setLayout(new GridLayout(1,4));
         mainPanel.add(facePanel);
         mainPanel.add(namePanel);
         mainPanel.add(mriPanel);
