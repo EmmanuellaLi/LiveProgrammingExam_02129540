@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args){
         Patient patient1 = new Patient("Daphne Von Oram", "https://martinh.netfirms.com/BIOE60010/DaphneVonOram.jpg", 62);
-        patient1.addExamination(new MriExamination("https://martinh.netfirms.com/BIOE60010/mri1.jpg", LocalDate.of(2023,9,28), 2));
+        patient1.addExamination(new MriExamination("https://martinh.netfirms.com/BIOE60010/mri1.jpg", LocalDate.of(2023,9,23), 2));
         patient1.addExamination(new BpExamination(130,70,LocalDate.of(2023,9,15),"ST"));
         DoctorDisplay doctorDisplay1 = new DoctorDisplay(patient1);
         AdministratorDisplay administratorDisplay1 = new AdministratorDisplay(patient1);

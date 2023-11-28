@@ -6,7 +6,9 @@ import Examinations.MriExamination;
 import Patient.Patient;
 
 import javax.swing.*;
+import java.awt.*;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class AdministratorDisplay extends Display{
@@ -34,11 +36,14 @@ public class AdministratorDisplay extends Display{
                 bpDate = e.getDate();
             }
         }
+        DateTimeFormatter pattern = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String mriDateString = mriDate.format(pattern);
+        String bpDateString = bpDate.format(pattern);
 
         // Displays.Display Information
         JPanel mainPanel = new JPanel();
         mainPanel.setSize(800,100);
-        String message = "<html>Patient: " + name + ": MRI: " + magneticStrength + " Tesla, " + mriDate.toString() + ": BP: " + duration + ", " + bpDate.toString() + "</html>";
+        String message = "<html>Patient: " + name + ": MRI: " + magneticStrength + " Tesla, " + mriDateString + ": BP: " + duration + ", " + bpDateString + "</html>";
         JLabel label = new JLabel(message);
         mainPanel.add(label);
         return(mainPanel);
